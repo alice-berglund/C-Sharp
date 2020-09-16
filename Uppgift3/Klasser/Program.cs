@@ -14,10 +14,4 @@ namespace Klasser
             Console.WriteLine("Hello World!");
         }
     }
-
-    public class Bil
-    {
-        public string Registreringsnummer { get; set; }
-
-    }
 }

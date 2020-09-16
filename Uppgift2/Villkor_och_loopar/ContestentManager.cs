@@ -44,20 +44,15 @@ namespace Villkor_och_loopar
 
         public string GetTheWinners()
         {
-            int winner = 0;
-            int fastestTime = 0;
-            int second = 0;
-            int nextFastestTime = 0;
+            int winner = int.MaxValue;
+            int fastestTime = int.MaxValue;
+            int second = int.MaxValue;
+            int nextFastestTime = int.MaxValue;
             foreach(Contestent contestent in contestants)
             {
                 int time = GetTime(contestent);
 
-                if(fastestTime == 0)
-                {
-                    fastestTime = time;
-                    winner = contestent.StartNumber;
-                }
-                else if(time < fastestTime)
+                if(time < fastestTime)
                 {
                     nextFastestTime = fastestTime;
 
@@ -67,11 +62,6 @@ namespace Villkor_och_loopar
 
                     winner = contestent.StartNumber;
 
-                }
-                else if(nextFastestTime == 0) 
-                {
-                    nextFastestTime = time;
-                    second = contestent.StartNumber;
                 }
                 else if(time < nextFastestTime)
                 {
