@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Villkor_och_loopar
 {
@@ -72,7 +73,12 @@ namespace Villkor_och_loopar
 
             }
 
-            string result = $"The winner is startnummer {winner.ToString()}! Second place is startnummer {second.ToString()}!";
+            TimeSpan winningTime = TimeSpan.FromSeconds(fastestTime);
+
+            TimeSpan secondTime = TimeSpan.FromSeconds(nextFastestTime);
+
+            string result = $"The winner is startnummer {winner.ToString()} with the time {winningTime}! \n" +
+                $" Second place is startnummer {second.ToString()} with the time {secondTime}!";
 
             return result;
         }
