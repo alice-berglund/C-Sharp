@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Klasser
 {
-    class Person
+    public class Person
     {
         public string Age { get; set; }
 
         public string Name { get; set; }
+
+        public List<Car> Cars { get; set; }
 
     }
 }
